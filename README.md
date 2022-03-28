@@ -104,6 +104,12 @@ The code in the `load_tweets.py` file is structured so that you never run into d
 Unfortunately, the code is extremely slow,
 so even when run in parallel it is still slower than the batched code.
 
+> **NOTE:**
+> The `tests_normalized_batch_parallel` are currently failing because they depend on the `load_tweets_parallel.sh` script,
+> and this script is currently failing due deadlocks in the `load_tweets_batch.py` script.
+> This test case should pass as soon as that script no longer generates errors.
+> (But that script doesn't need to be fully correct.)
+
 #### Normalized Data (batched)
 
 Parallel loading of the batched data will fail due to deadlocks.
