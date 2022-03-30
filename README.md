@@ -37,7 +37,7 @@ you will have to ensure that they remain passing as you complete the tasks below
 Bring up a fresh version of your containers by running the commands:
 ```
 $ docker-compose down
-$ docker-compose volume prune
+$ docker volume prune
 $ docker-compose up -d --build
 ```
 
